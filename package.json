@@ -1,0 +1,25 @@
+{
+  "name": "weekend_challenge_four",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nicbade/weekend_challenge_four.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nicbade/weekend_challenge_four/issues"
+  },
+  "homepage": "https://github.com/nicbade/weekend_challenge_four#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4",
+    "pg": "^7.1.2"
+  }
+}
