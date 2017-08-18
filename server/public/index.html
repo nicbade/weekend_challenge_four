@@ -9,9 +9,19 @@
     <title>Weekend Challenge Four</title>
 </head>
 
-<body>
+<body ng-app="EmployeeApp" ng-controller="EmployeeController as vm">
     <h1>Weekend Four Challenge</h1>
-
+    <div id="inputFields">
+        <div id="nameFields">
+            <input type="text" id="firstName" placeholder="First Name">
+            <input type="text" id="lastName" placeholder="Last Name">
+        </div>
+        <div id="jobInfo">
+            <input type="text" id="jobTitle" placeholder="Job Title">
+            <input type="text" id="annualSalary" placeholder="Annual Salary">
+        </div>
+        <button>Submit</button>
+    </div>
 </body>
 
 </html>
