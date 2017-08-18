@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>jQuery Express Node Starter</title>
-    <script src="vendors/angular.min.js"></script>
+    <script type "text/javascript" src="vendors/angular.min.js"></script>
     <script src="client.js"></script>
     <link rel="stylesheet" href="styles.css">
     <title>Weekend Challenge Four</title>
@@ -13,12 +13,12 @@
     <h1>Weekend Four Challenge</h1>
     <div id="inputFields">
         <div id="nameFields">
-            <input type="text" id="firstName" placeholder="First Name">
-            <input type="text" id="lastName" placeholder="Last Name">
+            <input type="text" id="firstName" placeholder="First Name" ng-model="vm.newEmployee.firstName">
+            <input type="text" id="lastName" placeholder="Last Name" ng-model="vm.newEmployee.lastName">
         </div>
         <div id="jobInfo">
-            <input type="text" id="jobTitle" placeholder="Job Title">
-            <input type="text" id="annualSalary" placeholder="Annual Salary">
+            <input type="text" id="jobTitle" placeholder="Job Title" ng-model="vm.newEmployee.jobTitle">
+            <input type="text" id="annualSalary" placeholder="Annual Salary" ng-model="vm.newEmployee.annualSalary">
         </div>
         <button>Submit</button>
     </div>

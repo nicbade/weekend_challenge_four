@@ -8,7 +8,4 @@ app.controller('EmployeeController', ['$http', function($http) {
     self.employees = [];
 
 
-
-
-
 }]); // end of app.controller
