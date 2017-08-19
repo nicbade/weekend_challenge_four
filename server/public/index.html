@@ -41,7 +41,7 @@
         </tbody>
     </table>
     <div id="monthlySalary">
-        <h4>Monthly Salary Expenditures: {{ vm.getSum() }}</h4>
+        <h4>Monthly Salary Expenditures: ${{ vm.getSum() | number:2}}</h4>
     </div>
 </body>
 
