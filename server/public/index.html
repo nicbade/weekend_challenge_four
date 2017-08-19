@@ -5,6 +5,7 @@
     <title>jQuery Express Node Starter</title>
     <script type "text/javascript" src="vendors/angular.min.js"></script>
     <script src="client.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
     <title>Weekend Challenge Four</title>
 </head>
@@ -13,14 +14,14 @@
     <h1>Weekend Four Challenge</h1>
     <div id="inputFields">
         <div id="nameFields">
-            <input type="text" id="firstName" placeholder="First Name" ng-model="vm.newEmployee.firstName">
-            <input type="text" id="lastName" placeholder="Last Name" ng-model="vm.newEmployee.lastName">
+            <input type="text" placeholder="First Name" ng-model="vm.newEmployee.firstName" class="form-control">
+            <input type="text" class="form-control" placeholder="Last Name" ng-model="vm.newEmployee.lastName">
         </div>
         <div id="jobInfo">
-            <input type="text" id="jobTitle" placeholder="Job Title" ng-model="vm.newEmployee.jobTitle">
-            <input type="text" id="annualSalary" placeholder="Annual Salary" ng-model="vm.newEmployee.annualSalary">
+            <input class="form-control" type="text" placeholder="Job Title" ng-model="vm.newEmployee.jobTitle">
+            <input class="form-control" type="number" placeholder="Annual Salary" ng-model="vm.newEmployee.annualSalary">
         </div>
-        <button id="submitButton" ng-click="vm.postEmployees()">Submit</button>
+        <button class="btn btn-primary" id="submitButton" ng-click="vm.postEmployees()">Submit</button>
     </div>
     <table>
         <thead>
@@ -33,10 +34,10 @@
         </thead>
         <tbody>
             <tr ng-repeat="employee in vm.employees">
-                <td>{{employee.first_name}}</td>
-                <td>{{employee.last_name}}</td>
-                <td>{{employee.job_title}}</td>
-                <td>{{employee.salary}}</td>
+                <td class="col-xs-6 col-sm-3">{{employee.first_name}}</td>
+                <td class="col-xs-6 col-sm-3">{{employee.last_name}}</td>
+                <td class="col-xs-6 col-sm-3">{{employee.job_title}}</td>
+                <td class="col-xs-6 col-sm-3">{{employee.salary}}</td>
             </tr>
         </tbody>
     </table>
