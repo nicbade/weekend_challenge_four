@@ -11,38 +11,45 @@
 </head>
 
 <body ng-app="EmployeeApp" ng-controller="EmployeeController as vm">
-    <h1>Weekend Four Challenge</h1>
-    <div id="inputFields">
-        <div id="nameFields">
-            <input type="text" placeholder="First Name" ng-model="vm.newEmployee.firstName" class="form-control">
-            <input type="text" class="form-control" placeholder="Last Name" ng-model="vm.newEmployee.lastName">
+    <div class='container'>
+        <h1 class='col-md-12'>Weekend Four Challenge</h1>
+        <div id="inputFields" class='col-md-6'>
+            <div id="nameFields">
+                <input type="text" placeholder="First Name" ng-model="vm.newEmployee.firstName" class="form-control">
+                <input type="text" class="form-control" placeholder="Last Name" ng-model="vm.newEmployee.lastName">
+            </div>
+            <div id="jobInfo">
+                <input class="form-control" type="text" placeholder="Job Title" ng-model="vm.newEmployee.jobTitle">
+                <input class="form-control" type="number" placeholder="Annual Salary" ng-model="vm.newEmployee.annualSalary">
+            </div>
+            <button class="btn btn-primary" id="submitButton" ng-click="vm.postEmployees()">Submit</button>
         </div>
-        <div id="jobInfo">
-            <input class="form-control" type="text" placeholder="Job Title" ng-model="vm.newEmployee.jobTitle">
-            <input class="form-control" type="number" placeholder="Annual Salary" ng-model="vm.newEmployee.annualSalary">
+        <div class='col-md-6'>
+            <img src="duke.jpg" class="img-responsive" alt "a picture of a patriot with his wild eagle">
         </div>
-        <button class="btn btn-primary" id="submitButton" ng-click="vm.postEmployees()">Submit</button>
-    </div>
-    <table>
-        <thead>
-            <tr>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Job Title</th>
-                <th>Annual Salary</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr ng-repeat="employee in vm.employees">
-                <td class="col-xs-6 col-sm-3">{{employee.first_name}}</td>
-                <td class="col-xs-6 col-sm-3">{{employee.last_name}}</td>
-                <td class="col-xs-6 col-sm-3">{{employee.job_title}}</td>
-                <td class="col-xs-6 col-sm-3">{{employee.salary}}</td>
-            </tr>
-        </tbody>
-    </table>
-    <div id="monthlySalary">
-        <h4>Monthly Salary Expenditures: ${{ vm.getSum() | number:2}}</h4>
+        <div class="container-fluid">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Job Title</th>
+                        <th>Annual Salary</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="employee in vm.employees">
+                        <td class="col-xs-6 col-sm-3">{{employee.first_name}}</td>
+                        <td class="col-xs-6 col-sm-3">{{employee.last_name}}</td>
+                        <td class="col-xs-6 col-sm-3">{{employee.job_title}}</td>
+                        <td class="col-xs-6 col-sm-3">{{employee.salary}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="monthlySalary">
+            <h4>Monthly Salary Expenditures: ${{ vm.getSum() | number:2}}</h4>
+        </div>
     </div>
 </body>
 
