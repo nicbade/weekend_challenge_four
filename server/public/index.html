@@ -33,8 +33,10 @@
         </thead>
         <tbody>
             <tr ng-repeat="employee in vm.employees">
-                <td>{{employee.firstname}}</td>
-                <td>{{}}</td>
+                <td>{{employee.first_name}}</td>
+                <td>{{employee.last_name}}</td>
+                <td>{{employee.job_title}}</td>
+                <td>{{employee.salary}}</td>
             </tr>
         </tbody>
     </table>

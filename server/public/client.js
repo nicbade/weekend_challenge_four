@@ -13,7 +13,7 @@ app.controller('EmployeeController', ['$http', function($http) {
             url: '/employee',
         }).then(function(response) {
             console.log(response.data);
-            self.messages = response.data;
+            self.employees = response.data;
         }); // end $http
     }; // end self.getEmployees
 
