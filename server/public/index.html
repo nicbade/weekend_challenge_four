@@ -7,6 +7,7 @@
     <script src="client.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Cabin|Fira+Sans" rel="stylesheet">
     <title>Weekend Challenge Four</title>
 </head>
 
@@ -25,7 +26,7 @@
             <button class="btn btn-primary" id="submitButton" ng-click="vm.postEmployees()">Submit</button>
         </div>
         <div class='col-md-6'>
-            <img src="duke.jpg" class="img-responsive" alt "a picture of a patriot with his wild eagle">
+            <img src="duke.jpg" class="img-responsive" alt="a picture of a patriot with his wild eagle">
         </div>
         <div class="container-fluid">
             <table class="table table-hover">
@@ -43,6 +44,9 @@
                         <td class="col-xs-6 col-sm-3">{{employee.last_name}}</td>
                         <td class="col-xs-6 col-sm-3">{{employee.job_title}}</td>
                         <td class="col-xs-6 col-sm-3">{{employee.salary}}</td>
+                        <td>
+                            <button type="button" class="btn btn-info">Active</button>
+                        </td>
                     </tr>
                 </tbody>
             </table>

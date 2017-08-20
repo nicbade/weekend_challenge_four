@@ -6,7 +6,7 @@ app.controller('EmployeeController', ['$http', function($http) {
     console.log('Employee Controller has been loaded!');
     var self = this;
     self.employees = [];
-
+    self.user = { is_active: true };
     self.getEmployees = function() {
         $http({ //angular ajax function
             method: 'GET',
@@ -29,6 +29,29 @@ app.controller('EmployeeController', ['$http', function($http) {
         }); // end $http
     }; //end self.Post
     self.getEmployees();
+
+    self.putEmployees = function(index) {
+        console.log('edit button clicked' + index);
+        self.enabledEdit[self.employees.length - 1] = true;
+
+        $http({
+            method: 'PUT',
+            url: '/employee',
+            data: self.employees
+        }).then(function(response) {
+            console.log(response);
+            self.getEmployees();
+        })
+    }
+
+    self.isActive = true;
+    self.activeButton = function() {
+        if (self.isActive === true) {
+            self.isActive === false;
+        } else {
+            self.isActive === true;
+        }
+    }
 
     self.getSum = function() {
         var total = 0;

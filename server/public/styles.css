@@ -10,3 +10,8 @@ table {
     margin: 5px;
     border: 1px solid black;
 }
+
+body {
+    /* font-family: 'Cabin', sans-serif; */
+    font-family: 'Fira Sans', sans-serif;
+}
